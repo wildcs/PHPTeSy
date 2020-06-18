@@ -37,7 +37,8 @@ Language Parser:
   _$L{'PARSER_EXAMPLE'}
   _$L{'This is just a text, which will not be found in the language-file. So it is shown as it is'}
   _$L{'USE_ALT_TEXT', 'This shortkey is also not found, but an alt-text parameter is set'}
-```                   
+```  
+*Locales are json-formated files in '/locale' dir*
 
 ### EXAMPLES
-Have a look at index.php and templates/example.html/php
+Have a look at index.php and templates/example.html.php
