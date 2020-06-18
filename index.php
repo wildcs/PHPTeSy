@@ -17,24 +17,22 @@
 ************************************************************************
 *                           INDEX EXAMPLE 
 *
+*       Project:      PHPTeSy - PHP Template System
 *       Filename:     index.php
 *       Description:  PHPTesy Example index page
 *       Author:       WildCS
 *       Version:      1.0
 *                          
 ************************************************************************/
+/* INCLUDES */
+require_once "src/phptesy/parser.php";
+
 /* GLOBAL CONSTANTS */
 define ( "ACTIVE_THEME", "default" );   // ACTIVE THEME
 define ( "LOCALE", "en_EN" );           // LANGUAGE
 
-/* INCLUDES */
-require_once "src/phptesy/parser.php";
-
-
-
 /* DEFAULTS VARS*/
 $site = "example";
-$theme = ACTIVE_THEME;
 
 /* SET VARS */
 if ( isset( $_REQUEST["page"] )){
@@ -43,8 +41,7 @@ if ( isset( $_REQUEST["page"] )){
 
 /* CREATE TEMPLATE CLASSSES */
 $T = new TemplateParser();    // create class_alias
-//$T = new TemplateParser();    // create class_alias
-
+// $T = new TemplateParser( ACTIVE_THEME, LOCALE );    // create class_alias with theme and locale
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +55,7 @@ $T = new TemplateParser();    // create class_alias
     /* get head-files from template */
     $T->renderHead( $site );
     /* get css-files from theme */
-    $T->renderThemeCSS( $theme );
+    $T->renderThemeCSS();
     ?>
   </head>
   

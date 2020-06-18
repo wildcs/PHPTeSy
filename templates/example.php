@@ -17,6 +17,7 @@
 ************************************************************************
 *                           TEMPLATE PHP-FILE
 *
+*       Project:      PHPTeSy - PHP Template System
 *       Filename:     example.php
 *       Description:  PHPTesy PHP-Function-File for 'example' template
 *       Author:       WildCS

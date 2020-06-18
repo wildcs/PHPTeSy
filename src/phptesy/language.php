@@ -17,6 +17,7 @@
 ************************************************************************
 *                          LOCALE PARSER 
 *
+*       Project:      PHPTeSy - PHP Template System
 *       Filename:     language.php
 *       Description:  PHPTesy Locale (Language) Parser
 *       Author:       WildCS

@@ -17,6 +17,7 @@
 ************************************************************************
 *                          TEMPLATE RENDERER
 *
+*       Project:      PHPTeSy - PHP Template System
 *       Filename:     parser.php
 *       Description:  PHPTesy Template Parser
 *       Author:       WildCS
@@ -35,8 +36,8 @@ require_once "language.php";
 
 /* directories */
 define ( "TEMPLATE_DIR",  "templates/" );   // directory site templates
-define ( "THEME_DIR",     "themes/" );       // directory style-themes
-define ( "LOCALE_DIR",      "locale/" );      // directory language-files
+define ( "THEME_DIR",     "themes/" );      // directory style-themes
+define ( "LOCALE_DIR",    "locale/" );      // directory language-files
 
 /* defaults (do not change) */
 define ( "DEFAULT_THEME", "default" );      // default theme-name (THEME_DIR . DEFAULT_THEME.css file) 
@@ -353,9 +354,14 @@ class TemplateParser
   /* RENDER THEME-CSS-FILE */
   /*  render theme css
   *
-  *   @param  string $theme - Name of theme file (without .css)
+  *   @param  string $theme - optional name of theme file (without .css)
   */
-  function renderThemeCSS( $theme ){
+  function renderThemeCSS( $theme = null ){
+    /* load new theme */
+    if (isset( $theme )){
+      $this->_loadTheme( $theme );
+    }
+    /* render css-link*/
     if( ! isset( $this->m_warning["css-missing"] )){
       ?>
       <link rel="stylesheet" type="text/css" href="<?php echo $this->m_themeFile;?>"  />
