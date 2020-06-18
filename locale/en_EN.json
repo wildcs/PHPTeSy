@@ -1,0 +1,25 @@
+ {  
+   "__INFO": { 
+        "__comment":"####################################",
+        "FileType": "PHPTeSy - LANGUAGE-FILE",
+        "Locale":   "en_EN",
+        "Language": "English",
+        "Author":   "WildCS - Christian Wild ",
+        "Version":  "0.0.1",
+        "__comment":"####################################"
+    },
+    "__comment" : "/* HEADERS */",
+    "PARSER_EXAMPLE" : "Text parsed by WildCS TemplateParser",
+    
+    "__comment" : "/* MENU */",
+    "DASHBOARD": "Dashboard",
+    "SYSTEM": "System",
+
+    "__comment": "/* GLOBAL */",
+    "SAVE": "Save",  
+    "APPLY": "Apply",                                               
+    "CANCEL": "Cancel",                                            
+    "REMOVE": "Remove",                                             
+    "YES": "Yes",                                                  
+    "NO": "No"              
+}

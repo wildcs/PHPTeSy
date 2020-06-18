@@ -1,0 +1,65 @@
+<!--                 
+************************************************************************                   
+*      ,------. ,--.  ,--.,------. ,--------.       ,---.              *
+*      |  .--. '|  '--'  ||  .--. ''--.  .--',---. '   .-',--. ,--.    *
+*      |  '--' ||  .--.  ||  '--' |   |  |  | .-. :`.  `-. \  '  /     *
+*      |  | --' |  |  |  ||  | --'    |  |  \   --..-'    | \   '      *
+*      `--'     `--'  `--'`--'        `--'   `----'`-----'.-'  /       *
+*                                                         `---'        *
+*                        PHPTemplateSystem                             *
+*                     © WildCS - Christian Wild                        *
+*                  https://github.com/wildcs/PHPTeSy/                  *
+*                _      __   _    __     __  _____   ____              *
+*               | | /| / /  (_)  / / ___/ / / ___/  / __/              *
+*               | |/ |/ /  / /  / / / _  / / /__   _\ \                *
+*               |__/|__/  /_/  /_/  \_,_/  \___/  /___/                *
+*                                                                      *
+************************************************************************
+*                       EXAMPLE TEMPLATE
+*
+*       Filename:     example.html
+*       Description:  PHPTesy header example template
+*       Author:       WildCS
+*       Version:      1.0
+*       Remark:       HTML-based templates will be there
+*                          
+************************************************************************/
+-->
+
+<!-- HEAD TAG -->
+<!-- content will be rendered to index' head by $T->renderHead( 'example' )-->
+<HEAD>
+    <TITLE>This would be added to the index' title</TITLE>
+    <!-- You can reference CSS and JS Files here -->
+    <link href="stye/print.css" type="text/css" media="print" />
+    <script src="js/script.js"></script>
+    <!-- or directly add js -->
+    <script language="javascript">
+        alert ( "Welcome" ); 
+    </script>
+</HEAD>
+
+<!-- BODY TAG -->
+<!-- content will be rendered to index' body by $T->renderBody( 'example' )-->
+<BODY>
+  <div id="content">
+    <h3>
+      WildCS Template Renderer Template
+    </h3>
+    <p>
+      You can write normal Text, HTML-Code,JavaScript or call PHP-Functions here.<br />
+      The following results returned from php:<br />
+      <i>_$F{ aFunction }</i><br />
+      <b>print a string:</b> <i>_$F{ printString, 'this is a function' }</i><br />
+      <b>do some calculations:</b> <i>_$F{ addUp, 3, 5, 3 }</i>  <br /> 
+    </p>
+    <p>
+      There's an LanguageFileParser included as well<br />
+      <!-- use translation file with key-based parameter -->
+      <i>_$L{"PARSER_EXAMPLE"}</i><br/ >
+      <!-- this text is not found in translation file as key, so it is shown as it is -->
+      <i>_$L{'This is just a text, which will not be found in the language-file. So it is shown as it is'}</i><br />
+      <i><!-- this key is not found in translation file, but the 'alt-text' parameter is set -->
+      _$L{'USE_ALT_TEXT', 'This shortkey is also not found, but an alt-text parameter is set'}</i><br />
+  </div>
+</BODY>

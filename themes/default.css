@@ -1,0 +1,56 @@
+
+/************************************************************************/                                                             
+/*      ,------. ,--.  ,--.,------. ,--------.       ,---.              */
+/*      |  .--. '|  '--'  ||  .--. ''--.  .--',---. '   .-',--. ,--.    */
+/*      |  '--' ||  .--.  ||  '--' |   |  |  | .-. :`.  `-. \  '  /     */
+/*      |  | --' |  |  |  ||  | --'    |  |  \   --..-'    | \   '      */
+/*      `--'     `--'  `--'`--'        `--'   `----'`-----'.-'  /       */
+/*                                                         `---'        */
+/*                        PHPTemplateSystem                             */
+/*                     © WildCS - Christian Wild                        */
+/*                  https://github.com/wildcs/PHPTeSy/                  */
+/*                _      __   _    __     __  _____   ____              */
+/*               | | /| / /  (_)  / / ___/ / / ___/  / __/              */
+/*               | |/ |/ /  / /  / / / _  / / /__   _\ \                */
+/*               |__/|__/  /_/  /_/  \_,_/  \___/  /___/                */
+/*                                                                      */
+/************************************************************************/
+/*                        DEFAULT STYLESHEET                            */
+/*                                                                      */
+/*       Filename:     default.css                                      */
+/*       Description:  PHPTesy Default Stylesheet example               */
+/*       Author:       WildCS                                           */
+/*       Version:      1.0                                              */
+/*       Remark:       Template depending stylesheets                   */
+/*                                                                      */
+/************************************************************************/
+
+/* body style */
+body{
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* header template style */
+#header{
+   margin: auto;
+}
+
+#header textarea{
+    background-color: #f9f9f9;
+    width: 50em;
+    height: 12em;
+    border: none;
+    resize: none;
+}
+
+/* content */
+#content{
+   font-family: Times, "Times New Roman", Georgia, serif;
+}
+
+#content i{
+    color: #625757;
+}
+
+
