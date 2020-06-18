@@ -13,7 +13,8 @@ There are some special "magic" tags to use locales and php functions, which must
 ### RENDER TEMPLATES
 Init parser class and render templates. Use this in your main/index php-file.
 ``` 
-$T = new TemplateParser();                  // create parser class
+$T = new TemplateParser();                  // create parser class (no theming and locales)
+$T = new TemplateParser( ACTIVE_THEME, LOCALE );    // create class_alias with theme and locale
 $T->getPageName( 'your-template-name' );    // returns title from <head> of template
 $T->renderHead( 'your-template-name' );     // put this into <head> of your index.php. Pastes content of template's head there
 $T->renderBody( 'your-template-name' );     // put this into <body> of your index.php. Pastes content of template's body there
