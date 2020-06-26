@@ -398,6 +398,7 @@ class TemplateParser
   */
   private function _splitPar( $string, $len = 0)
   {
+    $ret = [];
     $re = '/\'[^\']*\'(*SKIP)(*F)|,/im';
     $array = preg_split( $re, $string ); 
     if ( is_array($array) ){
@@ -405,10 +406,14 @@ class TemplateParser
       {
         $array[$key] = $this->_trimPar( $value );
       }
-      return $array;
+      $ret =  $array;
     } else {
-      return _trimPar( $string );
+      $ret = _trimPar( $string );
     }
+    while ( count($ret) < $len  ){
+      array_push( $ret, null );
+    }
+    return $ret;
   } 
 
   /* TRIM PARAMETERS */
